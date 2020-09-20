@@ -9,12 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-//Por padrão mesmo sem essa anotation todos os pacotes já são escaneados
-@ComponentScan(basePackages = {
-        "package io.github.t14g.repository",
-        "package io.github.t14g.service",
-        "com.umabiblioteca.projeto"
-})
 @RestController //Tornara a classe um controllador rest
 
 //Convenção Classe que inicializa + sufixo Application
