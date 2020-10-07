@@ -2,6 +2,7 @@ package io.github.t14g;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,8 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 //Convenção Classe que inicializa + sufixo Application
 public class VendasApplication {
 
-    @Autowired
-    @Qualifier("applicationName") // o que quero injetar na variável abaixo
+    @Value("${application.name}")
     private String applicationName;
 
     //Mapeia a url /hello da aplicação e mostra a mensagem Hello World
